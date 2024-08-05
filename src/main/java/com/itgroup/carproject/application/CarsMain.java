@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class CarsMain extends Application {
+    // 오늘은 날씨가 엄청 더워요.
 
     @Override
     public void start(Stage stage) throws Exception {
