@@ -11,6 +11,7 @@ public class CarsMain extends Application {
     // 영희가 푸시하려고 시도함.
     // 오늘은 날씨가 엄청 더워요.
     // 오늘 점심은 시원한 것으로 먹읍시다.
+    // 철수가 먼저 푸시함.
 
     @Override
     public void start(Stage stage) throws Exception {
