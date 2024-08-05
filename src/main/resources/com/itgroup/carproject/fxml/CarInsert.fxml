@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import com.sun.javafx.scene.control.DoubleField?>
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itgroup.carproject.controller.CarInsertController">
+    <children>
+
+        <fx:define>
+            <Double fx:id="xLabelPosition" fx:value="56.0"/>
+            <Double fx:id="xTextFieldPosition" fx:value="135.0"/>
+            <Double fx:id="textFieldWidth" fx:value="200.0"/>
+        </fx:define>
+        <Label layoutX="$xLabelPosition" layoutY="17.0" text="차량 등록 화면">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+
+        <Label layoutX="$xLabelPosition" layoutY="60.0" text="차량명">
+            <font>
+                <Font size="15.0" fx:id="myFont01"/>
+            </font>
+        </Label>
+        <TextField fx:id="fxmlName" layoutX="$xTextFieldPosition" layoutY="60.0" prefWidth="$textFieldWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="90.0" text="제조회사"/>
+        <TextField fx:id="fxmlCompany" layoutX="$xTextFieldPosition" layoutY="90.0" prefWidth="$textFieldWidth"
+                   text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="120.0" text="이미지01"/>
+        <TextField fx:id="fxmlImage01" layoutX="$xTextFieldPosition" layoutY="120.0" prefWidth="$textFieldWidth"
+                   text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="150.0" text="이미지02"/>
+        <TextField fx:id="fxmlImage02" layoutX="$xTextFieldPosition" layoutY="150.0" prefWidth="$textFieldWidth"
+                   text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="180.0" text="재고"/>
+        <TextField fx:id="fxmlStock" layoutX="$xTextFieldPosition" layoutY="180.0" prefWidth="$textFieldWidth" text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="210.0" text="단가"/>
+        <TextField fx:id="fxmlPrice" layoutX="$xTextFieldPosition" layoutY="210.0" prefWidth="$textFieldWidth" promptText="만원 단위로 입력하세요."/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="240.0" text="카테고리"/>
+        <ComboBox fx:id="fxmlCategory" layoutX="$xTextFieldPosition" layoutY="240.0" prefWidth="$textFieldWidth">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="--카테고리를 선택해 주세요."/>
+                    <String fx:value="휘발유"/>
+                    <String fx:value="경유"/>
+                    <String fx:value="하이브리드"/>
+                    <String fx:value="전기"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="270.0" text="상세설명"/>
+        <TextField fx:id="fxmlContents" layoutX="$xTextFieldPosition" layoutY="270.0" prefWidth="$textFieldWidth"
+                   text=""/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="300.0" text="적립포인트"/>
+        <TextField fx:id="fxmlPoint" layoutX="$xTextFieldPosition" layoutY="300.0" prefWidth="$textFieldWidth" promptText="만원 단위로 입력하세요."/>
+
+        <Label font="$myFont01" layoutX="$xLabelPosition" layoutY="330.0" text="입고일자"/>
+        <DatePicker fx:id="fxmlProductiondate" layoutX="$xTextFieldPosition" layoutY="330.0" prefWidth="$textFieldWidth"
+                    promptText="날짜를 선택해주세요."/>
+
+        <Button layoutX="$xLabelPosition" layoutY="380" prefHeight="40" prefWidth="280" text="등록하기"
+                onAction="#oncarInsert">
+
+        </Button>
+
+    </children>
+</AnchorPane>

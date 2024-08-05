@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itgroup.carproject.controller.CarsViewcontroller">
+    <center>
+        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="644.0">
+            <TableView fx:id="carsTable" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="635.0">
+                <columns>
+                    <TableColumn prefWidth="100.0" text="Column X" />
+                    <TableColumn prefWidth="110.0" text="Column X" />
+                    <TableColumn prefWidth="110.0" text="Column X" />
+                    <TableColumn prefWidth="110.0" text="Column X" />
+                    <TableColumn prefWidth="90.0" text="Column X" />
+                    <TableColumn prefWidth="110.0" text="Column X" />
+                </columns>
+            </TableView>
+            <Pagination fx:id="pagination" currentPageIndex="1" minHeight="62.0" minWidth="-Infinity" pageCount="10" prefHeight="350.0" prefWidth="750.0" />
+        </VBox>
+    </center>
+    <top>
+        <AnchorPane prefHeight="128.0" prefWidth="793.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="120.0" layoutY="40.0" mnemonicParsing="false" onAction="#onInsert" text="추가">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="30.0" right="30.0" />
+                    </padding>
+                </Button>
+                <Button layoutX="240.0" layoutY="40.0" mnemonicParsing="false" onAction="#onUpdate" text="수정">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="30.0" right="30.0" />
+                    </padding>
+                </Button>
+                <Button layoutX="360.0" layoutY="40.0" mnemonicParsing="false" onAction="#onDelete" text="삭제">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="30.0" right="30.0" />
+                    </padding>
+                </Button>
+                <Button layoutX="480.0" layoutY="40.0" mnemonicParsing="false" onAction="#onSaveFile" text="저장">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="30.0" right="30.0" />
+                    </padding>
+                </Button>
+                <Button layoutX="600.0" layoutY="40.0" mnemonicParsing="false" onAction="#onClosing" text="종료">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="30.0" right="30.0" />
+                    </padding>
+                </Button>
+                <Label layoutX="158.0" layoutY="78.0" text="출력모드 선택 :">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="fieldSearch" layoutX="262.0" layoutY="76.0" onAction="#choiceSelect" prefWidth="150.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="전체 보기" />
+                            <String fx:value="휘발유" />
+                            <String fx:value="경유" />
+                            <String fx:value="하이브리드" />
+                            <String fx:value="전기" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label layoutX="442.0" layoutY="80.0" text="현재 모드 :">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="pageStatus" layoutX="620.0" layoutY="82.0" text="pagingStatus" />
+            </children>
+        </AnchorPane>
+    </top>
+   <right>
+      <AnchorPane prefHeight="472.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="378.0" fitWidth="339.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </right>
+
+</BorderPane>
