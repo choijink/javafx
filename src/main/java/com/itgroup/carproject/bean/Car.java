@@ -15,7 +15,7 @@ public class Car {
 
     public Car() {
     }
-
+    // 여기는 빈 클래스 입니다.
     @Override
     public String toString() {
         return "cars{" +
